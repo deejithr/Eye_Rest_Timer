@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_TimeApp_MainWindow</class>
+ <widget class="QDialog" name="Dialog_TimeApp_MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1060</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="widget_TimerApp_MainWindow" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-50</y>
+     <width>1061</width>
+     <height>801</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#widget_TimerApp_MainWindow
+{
+    background-color:rgb(44, 44, 44)
+}</string>
+   </property>
+   <widget class="QWidget" name="widget_TimerSettings" native="true">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>170</y>
+      <width>401</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_TimerSettings
+{
+   background-color: rgb(46, 46, 46);
+   border: 3px solid rgb(85, 170, 255);
+   border-radius:  20px;
+   z-index = 5;
+}</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(85, 170, 255)</string>
+     </property>
+     <property name="text">
+      <string>duration</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(85, 170, 255)</string>
+     </property>
+     <property name="text">
+      <string>rest period</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_Duration">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>80</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox#spinBox_Duration
+{
+    background-color: rgb(57, 57, 57);
+    color:rgb(85, 170, 255);
+    font-size:18px;
+}
+
+QSpinBox#spinBox_Duration::up-arrow
+{
+    
+   
+}
+
+QSpinBox#spinBox_Duration::down-arrow
+{
+    
+   
+}</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_RestPeriod">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>140</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox#spinBox_RestPeriod
+{
+    background-color: rgb(57, 57, 57);
+    color:rgb(85, 170, 255);
+    font-size:18px;
+}
+
+QSpinBox#spinBox_RestPeriod::up-arrow
+{
+    
+   
+}
+
+QSpinBox#spinBox_RestPeriod::down-arrow
+{
+    
+   
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>90</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>BN Jinx</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(85, 170, 255)</string>
+     </property>
+     <property name="text">
+      <string>min</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>150</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>BN Jinx</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(85, 170, 255)</string>
+     </property>
+     <property name="text">
+      <string>min</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_Update">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>230</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light SemiCondensed</family>
+       <pointsize>20</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#pushButton_Update
+{
+   background-color: rgb(85, 170, 255);
+   border-radius: 20px;
+}
+
+QPushButton#pushButton_Update::pressed
+{
+   background-color: rgb(68, 135, 203);
+}
+
+QPushButton#pushButton_Update::hover
+{
+   border: 3px solid white;
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>UPDATE</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_TimerSettings">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiLight SemiConde</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#label_TimerSettings
+{
+   background-color:rgb(85, 170, 255);
+   border: 5px solid rgb(85, 170, 255);
+   border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>TIMER SETTINGS</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_TimerStatus" native="true">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>170</y>
+      <width>581</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget#widget_TimerStatus
+{
+    background-color: rgb(46, 46, 46);
+    border: 3px solid rgb(170, 170, 255);
+    border-radius: 20px;
+}</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_StartStop_Timer">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>350</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light SemiCondensed</family>
+       <pointsize>20</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#pushButton_StartStop_Timer
+{
+   background-color: rgb(170, 170, 255);
+   border-radius: 20px;
+}
+
+QPushButton#pushButton_StartStop_Timer::pressed
+{
+   background-color: rgb(125, 125, 188);
+}
+
+QPushButton#pushButton_StartStop_Timer::hover
+{
+   border: 3px solid white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>START/STOP</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>30</y>
+       <width>201</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>resources/images/running_bg.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_RunningStatus">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>40</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift SemiBold Condensed</family>
+       <pointsize>29</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>RUNNING</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_Circle2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>60</y>
+       <width>310</width>
+       <height>310</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_Circle2
+{
+    background-color:rgb(191, 191, 191);
+    border-radius: 155px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_Circle1">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>340</width>
+       <height>340</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_Circle1
+{
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.749377 rgba(141, 65, 255, 0), stop:0.750623 rgba(170, 170, 255, 255));
+   border-radius: 170px;
+     
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_IntermediateCircle">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>85</y>
+       <width>260</width>
+       <height>260</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_IntermediateCircle
+{
+    background-color:rgb(46, 46, 46);
+    border-radius:130px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_InnermostCircle">
+     <property name="geometry">
+      <rect>
+       <x>88</x>
+       <y>98</y>
+       <width>240</width>
+       <height>240</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_InnermostCircle
+{
+     background-color: rgb(46, 46, 46);
+     border-radius: 120px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_CountDownTimer">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>191</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>PhrasticMedium</family>
+        <pointsize>36</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel#label_CountDownTimer
+{
+    color:white;
+}</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt; color:#ffffff;&quot;&gt;00:&lt;/span&gt;&lt;span style=&quot; font-size:36pt; color:#ffffff;&quot;&gt;00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <zorder>frame_Circle2</zorder>
+    <zorder>pushButton_StartStop_Timer</zorder>
+    <zorder>label_6</zorder>
+    <zorder>label_RunningStatus</zorder>
+    <zorder>frame_IntermediateCircle</zorder>
+    <zorder>frame_Circle1</zorder>
+    <zorder>frame_InnermostCircle</zorder>
+   </widget>
+   <widget class="QLabel" name="label_TimerStatus">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>120</y>
+      <width>211</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiLight SemiConde</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#label_TimerStatus
+{
+   background-color:rgb(170, 170, 255);
+   border: 5px solid rgb(170, 170, 255);
+   border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>TIMER STATUS</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_TimerMW_Close">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>50</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light SemiCondensed</family>
+      <pointsize>18</pointsize>
+      <weight>3</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#pushButton_TimerMW_Close
+{
+   background-color:rgb(0, 0, 0);
+   color: white;
+   font: 25  18pt &quot;Bahnschrift Light SemiCondensed&quot;;
+}
+
+QPushButton#pushButton_TimerMW_Close::hover
+{
+   background-color: rgb(216, 81, 86);
+   
+}
+
+QPushButton#pushButton_TimerMW_Close::pressed
+{
+   background-color: rgb(186, 70, 76);
+   
+}</string>
+    </property>
+    <property name="text">
+     <string>x</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_TimerMW_Minimize">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>50</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift Light SemiCondensed</family>
+      <pointsize>24</pointsize>
+      <weight>3</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#pushButton_TimerMW_Minimize
+{
+   background-color:rgb(0, 0, 0);
+   color: white;
+   font: 25 24pt &quot;Bahnschrift Light SemiCondensed&quot;;
+}
+
+QPushButton#pushButton_TimerMW_Minimize::hover
+{
+   background-color: rgb(112, 176, 206);
+   
+}
+
+QPushButton#pushButton_TimerMW_Minimize::pressed
+{
+   background-color: rgb(94, 147, 172);
+   
+}</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>1061</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_AutostartTimer">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>560</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox#checkBox_AutostartTimer
+{
+   color: rgb(85, 170, 255);
+   font: 18pt &quot;Bahnschrift SemiLight Condensed&quot;;
+}</string>
+    </property>
+    <property name="text">
+     <string>Auto start timer</string>
+    </property>
+   </widget>
+   <zorder>label_5</zorder>
+   <zorder>label_TimerStatus</zorder>
+   <zorder>label_TimerSettings</zorder>
+   <zorder>widget_TimerSettings</zorder>
+   <zorder>widget_TimerStatus</zorder>
+   <zorder>pushButton_TimerMW_Close</zorder>
+   <zorder>pushButton_TimerMW_Minimize</zorder>
+   <zorder>checkBox_AutostartTimer</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
