@@ -4,6 +4,7 @@ A simple timer application created using PyQt5, which will show a popup to remin
 * The duration and rest period can be configured
 * Timer-Autostart feature added
 * UI designed for 1920x1080 screens
+* Audible cues to indicate rest period has ended
 
 # UI
 ![Eye_Rest UI](https://user-images.githubusercontent.com/108613233/177037296-23f2a529-e580-4523-a28a-bd84b80102c6.png)
